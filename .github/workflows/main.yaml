@@ -16,34 +16,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3. Install dependencies
       - name: Install dependencies
         working-directory: MLProject
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. Run MLflow Project
       - name: Run MLflow Project
         working-directory: MLProject
         env:
-          MLFLOW_ALLOW_FILE_STORE: "true"   # penting agar file backend di Linux runner diterima
+          MLFLOW_TRACKING_URI: sqlite:///mlflow.db
+          MLFLOW_ALLOW_FILE_STORE: "true"
         run: |
           mlflow run . -e main --env-manager=local
 
-      # 5. Upload MLflow artifacts
       - name: Upload MLflow artifacts
         uses: actions/upload-artifact@v4
         with:
           name: mlflow-artifacts
-          path: MLProject/mlruns
+          path: |
+            MLProject/mlruns
+            MLProject/mlflow.db
+            MLProject/artifacts

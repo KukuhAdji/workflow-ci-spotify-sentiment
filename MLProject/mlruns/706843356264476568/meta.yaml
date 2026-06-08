@@ -1,6 +1,0 @@
-artifact_location: file:///C:/UNESA/STUDPEN/Project/Eksperimen_SML_ADJI/Workflow-CI/MLProject/mlruns/706843356264476568
-creation_time: 1780932851796
-experiment_id: '706843356264476568'
-last_update_time: 1780932851796
-lifecycle_stage: active
-name: Spotify Sentiment Classification TFIDF SMOTE SVM
