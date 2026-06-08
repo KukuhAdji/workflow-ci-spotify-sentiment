@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/UNESA/STUDPEN/Project/Eksperimen_SML_ADJI/Workflow-CI/MLProject/mlruns/0/dfc603f800f5475d87b9dd030b3ddcbf/artifacts
+end_time: 1780932852147
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: dfc603f800f5475d87b9dd030b3ddcbf
+run_name: serious-crab-947
+run_uuid: dfc603f800f5475d87b9dd030b3ddcbf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1780932848825
+status: 4
+tags: []
+user_id: Kukuh

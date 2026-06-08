@@ -1,0 +1,7 @@
+﻿name: spotify_sentiment_mlproject
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    command: "python modelling.py"
