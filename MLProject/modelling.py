@@ -78,7 +78,7 @@ def main():
     ])
 
     mlflow_run_id = os.environ.get("MLFLOW_RUN_ID")
-    
+
     if mlflow_run_id:
         run_context = mlflow.start_run(run_id=mlflow_run_id)
     else:
